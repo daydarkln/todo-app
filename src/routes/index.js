@@ -1,24 +1,29 @@
 import React from 'react'
-import CounterContainer from '../containers/CounterContainer'
+import Todo from '../containers/Todo'
+import AddForm from '../containers/AddForm'
 import Header from '../components/Header'
 import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
-import styled from '@emotion/styled'
+import { Layout } from 'antd'
+import Footer from '../components/Footer'
 
-const Container = styled.div`
-  text-align: center;
-`
+const { Content } = Layout
+
 export const history = createBrowserHistory()
 
 function Routes() {
   return (
     <Router history={history}>
-      <Container>
+      <Layout>
         <Header />
-        <Switch>
-          <Route path="/" component={CounterContainer} />
-        </Switch>
-      </Container>
+        <Content>
+          <Switch>
+            <Route exact path="/" component={Todo} />
+            <Route path="/add" component={AddForm} />
+          </Switch>
+        </Content>
+        <Footer />
+      </Layout>
     </Router>
   )
 }
