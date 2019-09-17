@@ -1,4 +1,15 @@
+Для запуска локального сервера необходимо установить глобально `json-server`
+
+```
+npm install -g json-server
+```
+
+```
+json-server ./db.json -p=3001
+```
+
 # Todo App
+
 [![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
 
 This project was generated with [Create Redux App](https://github.com/jonidelv/generator-create-redux-app). Refer to `docs/create-redux-app` to find more information on how to perform common tasks.
