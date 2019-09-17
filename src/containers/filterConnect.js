@@ -1,7 +1,7 @@
-import { filterList } from '../actions/list'
+import { filterList, dropFilter } from '../actions/list'
 import { connect } from 'react-redux'
 
-const mapDispatchToProps = { filterList }
+const mapDispatchToProps = { filterList, dropFilter }
 
 export default connect(
   undefined,

@@ -5,19 +5,16 @@ import store from './store'
 import Routes from './routes'
 import './styles/globalStyles.css'
 import * as serviceWorker from './utils/serviceWorker'
-import { DragDropContext } from 'react-beautiful-dnd'
 import axios from 'axios'
 
 import 'antd/dist/antd.css'
 
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'http://localhost:3001'
 
 render(
-  <DragDropContext>
-    <Provider store={store}>
-      <Routes />
-    </Provider>
-  </DragDropContext>,
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
   document.getElementById('root'),
 )
 // If you want your app to work offline and load faster, you can change

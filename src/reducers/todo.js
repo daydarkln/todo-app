@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
     case types.FILTER_LIST:
       return {
         ...state,
-        list: state.list.filter(item => item[action.key] === action.value),
+        list: state.defaultList.filter(item => item[action.key] === action.value),
       }
     case types.DROP_FILTER:
       return {
@@ -36,31 +36,37 @@ export default (state = initialState, action) => {
       return {
         ...state,
         list: updateWithArray('status'),
+        defaultList: updateWithArray('status'),
       }
     case types.CHANGE_TITLE:
       return {
         ...state,
         list: updateWithArray('title'),
+        defaultList: updateWithArray('title'),
       }
     case types.CHANGE_DESCRIPTION:
       return {
         ...state,
         list: updateWithArray('description'),
+        defaultList: updateWithArray('description'),
       }
     case types.CHANGE_PRIORITY:
       return {
         ...state,
         list: updateWithArray('priority'),
+        defaultList: updateWithArray('priority'),
       }
     case types.CHANGE_START_DATE:
       return {
         ...state,
         list: updateWithArray('startDate'),
+        defaultList: updateWithArray('startDate'),
       }
     case types.CHANGE_END_DATE:
       return {
         ...state,
         list: updateWithArray('endDate'),
+        defaultList: updateWithArray('endDate'),
       }
 
     default:

@@ -57,3 +57,25 @@ code {
 .jcsb {
   justify-content: space-between;
 }
+
+.kanban__item {
+  border: 1px gray solid;
+  padding: 10px;
+}
+
+.ant-layout-header a {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.ant-layout-header a.active {
+  background: white;
+}
+
+.ant-layout-header a.active svg {
+  fill: black;
+}
+
+.ant-layout.todo-app {
+  min-height: 100vh;
+}
